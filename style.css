@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        /* Base styles */
+body {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+        /* Header styling */
+.section-header {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 7px;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+/* Introduction section */
+.introduction-container {
+    display: flex;
+    justify-content: center;
+    margin-left: 220px;
+    margin-right: 220px;
+    margin-bottom: 30px;
+ }
+ 
+ .introduction-border {
+    border: 2px solid #38bdf8;
+    border-radius: 40px;
+    padding: 25px 35px;  /* Reduced padding */
+    background-color: #1e293b;
+ }
+ 
+ .introduction-text {
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 1.4;  /* Reduced from 1.6 */
+    margin-bottom: 12px;  /* Reduced from 15px */
+    text-align: justify;
+ }
+ 
+ .introduction-text:last-child {
+    margin-bottom: 0;
+ }
+ 
+ .highlight {
+    color: #40e3ff;
+    font-weight: 500;
+ }
+
+        /* Job fields section */
+.job-fields-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-left: 220px;
+    margin-right: 220px;
+    margin-bottom: 20px;
+}
+
+.job-field {
+    color: #ffffff;
+    border: 2px solid #38bdf8;
+    border-radius: 40px;
+    padding: 25px 30px;
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    background-color: #1e293b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.job-field:hover {
+    background-color: #22d3ee;
+    color: #0f172a;
+}
+
+        /* Contact button and dropdown */
+.contact-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.contact-label {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: 2px solid #38bdf8;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+.contact-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 15px;
+}
+
+.name-dropdown {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: 2px solid #38bdf8;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 5px;
+    background-color: #1e293b;
+    padding: 15px 20px;
+    border: 2px solid #38bdf8;
+    border-radius: 20px;
+    min-width: 300px;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info div {
+    margin: 12px 0;
+    font-weight: 400;
+}
+
+.contact-info i {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #22d3ee;
+}
+
+.contact-label:hover,
+.name-dropdown:hover {
+    background-color: #22d3ee;
+    color: #0f172a;
+}
+

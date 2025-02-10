@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Content</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <style>
+            /* SIZE AND FONT COLOR FOR BACKGROUND, TEXT */
+        body {
+            background-color: #0f172a;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 19px;
+            line-height: 1.5;
+        }
+
+            /* BACK BUTTON CSS CODE */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #1e293b;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid #38bdf8;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-button:hover {
+            background-color: #22d3ee;
+            color: #0f172a;
+            transform: scale(1.05);
+        }
+
+            /* CONTENTS CSS CODE */
+        #content-container {
+            margin: 80px auto;
+            margin-top: 30px;
+            width: 80%;
+            max-width: 1050px;
+            background-color: #0f172a;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Updated section heading style */
+        /* Remove underline from main title */
+        .content-title {
+            font-size: 60px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Modify section headings to have lines above and below */
+        .section-heading {
+            font-size: 50px;
+            color: #ffffff;
+            text-align: left;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #38bdf8;
+            padding-bottom: 10px;
+        }
+
+        .subsection-heading {
+            color: #38bdf8; /* Keeps the blue color */
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ul li, ol li {
+            margin-bottom: 8px;
+        }
+
+        .content-section {
+            margin-bottom: 30px;
+        }
+
+        .content-subsection {
+            margin-bottom: 20px;
+        }
+
+        /* Additional styles for tables, roles, etc. remain the same */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #38bdf8;
+            padding: 12px;
+            text-align: left;
+            color: #e2e8f0;
+        }
+
+        table th {
+            background-color: #2d3748;
+            color: #22d3ee;
+        }
+
+            /* SIDEBAR MENU */
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: #1e293b;
+            padding: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            border: 2px solid #38bdf8;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 250px;
+            height: 100%;
+            background-color: #1e293b;
+            transition: right 0.3s ease;
+            z-index: 1500;
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+        }
+
+        .sidebar.open {
+            right: 0;
+        }
+
+        .sidebar-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar nav ul li {
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .sidebar nav ul li:hover {
+            background-color: #22d3ee;
+            color: #0f172a;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <div class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Back
+    </div>
+
+    <!-- Where the contents are filled by script.js code -->
+    <div id="content-container">
+        <!-- Content will be dynamically inserted here -->
+    </div>
+
+    <!-- Add this to your existing HTML -->
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="sidebar">
+        <div class="sidebar-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <nav>
+            <h3>Navigation</h3>
+            <ul>
+                <li data-section="overview">Overview</li>
+                <li data-section="roadmap">Roadmap</li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- To link with the script.js code -->
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
